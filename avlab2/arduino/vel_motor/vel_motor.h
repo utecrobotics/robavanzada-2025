@@ -1,7 +1,3 @@
-#include <ros.h>
-#include <std_msgs/Int32.h>
-#include <std_msgs/Float32.h>
-
 #define ENCODER_FREQUENCY                 10   //hz
 
 #define PWM_M2A  10
@@ -20,9 +16,3 @@ volatile int right_wheel_tick_count = 0;
 volatile int last_right_wheel_tick_count = 0;
 
 unsigned long tTime[4];
-
-
-/********* Publishers *********/
-
-std_msgs::Float32 right_w_msg;
-ros::Publisher encoder("encoder", &right_w_msg);
