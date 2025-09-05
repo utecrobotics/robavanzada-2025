@@ -1,12 +1,7 @@
 #include "vel_motor.h"
 
-ros::NodeHandle nh;
 
 void setup() {
-
-  nh.initNode();
-  
-  nh.advertise(encoder);
 
   pinMode(ENC_IN_RIGHT_A , INPUT_PULLUP);
   pinMode(ENC_IN_RIGHT_B , INPUT);
@@ -34,7 +29,6 @@ void loop() {
     delta_tiempo = 1.0/ENCODER_FREQUENCY;
     right_enc_w = (right_wheel_tick_count - last_right_wheel_tick_count)/delta_tiempo;
     right_w_msg.data = right_enc_w*(2.0*PI)/(7.0*60.0);  
-    encoder.publish(&right_w_msg);
 
     // Reduccion = 60.0
     // Cuentas por revolucion = 7.0
@@ -47,7 +41,6 @@ void loop() {
     tTime[0] = t;
   }
 
-  nh.spinOnce();
 }
 
 
