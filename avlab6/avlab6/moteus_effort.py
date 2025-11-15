@@ -41,17 +41,17 @@ async def main():
       else:
         missed_replies = 0
 
-            data = result[0]
-            mode = data.values[moteus.Register.MODE]
-            position = data.values[moteus.Register.POSITION]
-            torque = data.values[moteus.Register.TORQUE]
-            temperature = data.values[moteus.Register.TEMPERATURE]
+      data = result[0]
+      mode = data.values[moteus.Register.MODE]
+      position = data.values[moteus.Register.POSITION]
+      torque = data.values[moteus.Register.TORQUE]
+      temperature = data.values[moteus.Register.TEMPERATURE]
 
-            ff_torque = 0
+      ff_torque = 0
 
-            print(f"Mode: {mode}, Position: {position}, cmd_torque: {ff_torque}, temperature: {temperature}")
+      print(f"Mode: {mode}, Position: {position}, cmd_torque: {ff_torque}, temperature: {temperature}")
 
-            await asyncio.sleep(1/RATE_Hz)
+      await asyncio.sleep(1/RATE_Hz)
                 
   except KeyboardInterrupt:
     print("The mjbots node is closed!")
