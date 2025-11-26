@@ -1,0 +1,34 @@
+<?xml version="1.0" ?><sdf version="1.6">
+  <model name="Marker0">
+    <static>true</static>
+    <link name="link">
+      <inertial>
+        <inertia>
+          <ixx>0.005</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.005</iyy>
+          <iyz>0</iyz>
+          <izz>0.005</izz>
+        </inertia>
+        <mass>1</mass>
+      </inertial>
+      <collision name="collision">
+        <geometry>
+          <mesh>
+            <uri>model://marker0/meshes/Marker0.dae</uri>
+            <scale>5.2 0.2 0.2</scale>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <mesh>
+            <uri>model://marker0/meshes/Marker0.dae</uri>
+            <scale>5.2 0.2 0.2</scale>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+  </model>
+</sdf>

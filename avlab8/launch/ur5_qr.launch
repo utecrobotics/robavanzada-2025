@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<launch>
+
+  <include file="$(find-pkg-share ur_simulation_gazebo)/launch/ur_sim_control.launch.py">
+    <arg name="world" value="$(find-pkg-share avlab8)/worlds/qr_figure.world"/>
+  </include>
+
+</launch>
